@@ -1,3 +1,6 @@
+# /admin/config.yml
+publish_mode: editorial_workflow
+
 backend:
   name: git-gateway
   accept_roles: #optional - accepts all users if left out
