@@ -9,5 +9,13 @@ const headers = {
 exports.handler = function({httpMethod,queryStringParameters},context,callback)
 {
 
+	const { word } = queryStringParameters
+
+	if(words.includes(word){
+	callback(null, {
+	statusCode: 401,
+	body: '•s“KØ‚È’PŒê‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·'
+	});
+	}
 
 }
