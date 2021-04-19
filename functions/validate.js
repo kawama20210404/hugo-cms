@@ -14,7 +14,7 @@ exports.handler = ({httpMethod,queryStringParameters},context,callback)
 	statusCode: 401,
 	body: '•s“KØ‚È’PŒê‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·'
 	});
-	}
+	};
 
 
 }
