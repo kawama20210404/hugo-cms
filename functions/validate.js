@@ -17,7 +17,7 @@ exports.handler = function({httpMethod,queryStringParameters},context,callback)
 	callback(null, {
 		statusCode: 400,
 		body: JSON.stringify({
-			message:'${word}ÇÕïKê{Ç≈Ç∑ÅB',
+			message:'$ {word} is required.',
 		}),
 		headers,
 	})
