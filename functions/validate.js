@@ -8,7 +8,7 @@ const headers = {
 
 exports.handler = function({httpMethod,queryStringParameters},context,callback)
 {
-const { word } = queryStringParameters
+
 
 	const { word } = queryStringParameters
 
