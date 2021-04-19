@@ -4,7 +4,8 @@ const words = ["ƒVƒƒTƒo"]
 
 const headers={"Content-Type":"application/json;charset=UTF-8"}
 
-exports.handler = ({httpMethod,queryStringParameters},context,callback) =>{
+exports.handler = ({httpMethod,queryStringParameters},context,callback) 
+{
 
 	const { word } = queryStringParameters
 
