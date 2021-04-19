@@ -12,7 +12,7 @@ exports.handler = function({httpMethod,queryStringParameters},context,callback)
 
 	const { word } = queryStringParameters
 
-	if(words.includes(word){
+	if(words.includes(word)){
 	callback(null, {
 		statusCode: 401,
 		body: JSON.stringify({
