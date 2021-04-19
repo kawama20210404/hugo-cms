@@ -11,6 +11,18 @@ exports.handler = function({httpMethod,queryStringParameters},context,callback)
 
 
 	const { word } = queryStringParameters
+		
+		
+	if(!word){
+	callback(null, {
+		statusCode: 400,
+		body: JSON.stringify({
+			message:'${word}ÇÕïKê{Ç≈Ç∑ÅB',
+		}),
+		headers,
+	})
+	return
+	}
 
 	if(words.includes(word)){
 	callback(null, {
