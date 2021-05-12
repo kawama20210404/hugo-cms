@@ -5,7 +5,16 @@
 		});
 	}	
 
-				<img 
-  		src="http://52.192.18.116/Image001.png?nf_resize=fit&w=1000"
-  		alt="Screenshots of CSS-Tricks and CodePen homepages"
-		/>
+import Image from 'next/image';
+
+export default function MyImage() {
+  return (
+    <Image
+      src="http://52.192.18.116/Image001.png"
+      alt="what a great boop"
+      width="1368"
+      height="1044"
+      layout="responsive"
+    />
+  );
+}}
