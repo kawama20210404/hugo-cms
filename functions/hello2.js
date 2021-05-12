@@ -1,7 +1,7 @@
 // functions/newsletter.js
 exports.handler = async (event) => {
   const { body } = event; // Request body data
-  const fetch = request('node-fetch').default;.
+  const fetch = request('node-fetch').default;
 
   // Basic example of sending the data to an external API
   fetch(`http://52.192.18.116/Image001.png`, {
