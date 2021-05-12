@@ -1,7 +1,8 @@
 	exports.handler = function(event, context, callback) {	
 		callback(null, {
 		statusCode: 200,
-		body: 'Hello World'
+		body: 'Hello World',
+		image: "http://54.199.242.54/Image001.png"
 		});
-				<img src="http://54.199.242.54/Image001.png" alt="" class="star-count">
+
 	}	
