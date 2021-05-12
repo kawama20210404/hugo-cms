@@ -4,7 +4,7 @@ exports.handler = async (event) => {
   const fetch = request('node-fetch').default;
 
   // Basic example of sending the data to an external API
-  fetch(`http://52.192.18.116/Image001.png`, {
+  fetch(`http://54.238.174.36 /Image001.png`, {
     method: "GET",
     headers: {
       "Content-type": "application/json",
