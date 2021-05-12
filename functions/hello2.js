@@ -4,5 +4,16 @@
 		body: 'Hello World',
 		image: "http://52.192.18.116/Image001.png"
 		});
+		
+		
+		const handler = StripeCheckout.configure({
+  		key: STRIPE_PUBLISHABLE_KEY,
+  		image: "http://52.192.18.116/Image001.png",
+  		locale: "auto",
+  		token: token => {
+    		// We'll fill this out in a second.
+  		}
+		});
 
 	}	
+	
