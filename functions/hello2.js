@@ -1,4 +1,4 @@
-exports.handler = async (event) => {
+exports.handler = function(event, context, callback) {
     const http = require ('http');
     console.log('value1 = ' + event.key1);
     http.get("http://www.google.com/index.html", function(res) {
