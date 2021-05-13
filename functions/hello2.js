@@ -13,9 +13,10 @@ exports.handler = function(event, context, callback) {
         console.log("Event: " + event);
     });
     
+    const queryStringParams = event.queryStringParameters;
+    
     callback(null,{
     	//body:$event.identity.sourceIp
-    	const queryStringParams = event.queryStringParameters;
     	body:JSON.stringify(queryStringParams);
 	})
     
