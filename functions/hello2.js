@@ -1,6 +1,5 @@
 exports.handler = function(event, context, callback) {
     const http = require ('http');
-    const queryStringParams = event.queryStringParameters;
     
     http.get("http://13.231.155.208/Image001.png", function(res) {
         console.log("Got response: " + res.statusCode);
@@ -18,7 +17,7 @@ exports.handler = function(event, context, callback) {
     
     callback(null,{
     	//body:$event.identity.sourceIp
-    	body:JSON.stringify(queryStringParams)
+    	body:JSON.stringify(event)
 	})
     
     
