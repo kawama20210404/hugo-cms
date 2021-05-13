@@ -1,25 +1,18 @@
-import fetch from 'node-fetch';
-// functions/newsletter.js
-exports.handler = async (event) => {
-  const { body } = event; // Request body data
-  const fetch = require('http').request('node-fetch').default;
 
-  // Basic example of sending the data to an external API
-  fetch(`http://54.238.174.36/Image001.png`, {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-      // Add credentials as required by the external service
-    },
-    body: null, // Send the data
-  })
-    .then((response) => {
-      // Do stuff and returns 200 response...
-    })
-    .catch((error) => {
-      // Do stuff and returns 4xx / 5xx response...
-    });
-};
+const http = require('http'); 
+http.get('http://54.238.174.36/Image001.png', (resp) => { 
+    let data = ''; 
 
-// POST localhost:8888/.netlify/functions/newsletter
-// → 200 OK
+    // A chunk of data has been received. 
+    resp.on('data', (chunk) => { 
+        data += chunk; 
+    }); 
+
+    // The whole response has been received. Print out the result. 
+    resp.on('end', () => { 
+        console.log(JSON.parse(data).explanation); 
+    }); 
+
+}).on("error", (err) => { 
+    console.log("Error: " + err.message); 
+});
