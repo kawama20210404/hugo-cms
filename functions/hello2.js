@@ -10,7 +10,7 @@ exports.handler = async (event) => {
       "Content-type": "application/json",
       // Add credentials as required by the external service
     },
-    body: body, // Send the data
+    body: null, // Send the data
   })
     .then((response) => {
       // Do stuff and returns 200 response...
