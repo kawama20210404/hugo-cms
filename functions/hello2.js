@@ -15,7 +15,7 @@ exports.handler = function(event, context, callback) {
     
     callback(null,{
     	//body:$event.identity.sourceIp
-    	body:event.identity['sourceIp']
+    	body:event.requestContext.identity['sourceIp']
 	})
     
     
