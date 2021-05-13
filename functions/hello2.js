@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+//import fetch from 'node-fetch';
 // functions/newsletter.js
 exports.handler = async (event) => {
   const { body } = event; // Request body data
@@ -6,7 +6,7 @@ exports.handler = async (event) => {
 
   // Basic example of sending the data to an external API
   fetch(`http://54.238.174.36/Image001.png`, {
-    method: "GET",
+    method: "POST",
     headers: {
       "Content-type": "application/json",
       // Add credentials as required by the external service
