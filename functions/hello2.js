@@ -1,4 +1,4 @@
-//import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 // functions/newsletter.js
 exports.handler = async (event) => {
   const { body } = event; // Request body data
