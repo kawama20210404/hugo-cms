@@ -15,7 +15,8 @@ exports.handler = function(event, context, callback) {
     
     callback(null,{
     	//body:$event.identity.sourceIp
-    	body:event['requestContext']['identity']['sourceIp']
+    	const queryStringParams = event.queryStringParameters;
+    	body:JSON.stringify(queryStringParams);
 	})
     
     
