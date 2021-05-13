@@ -1,7 +1,7 @@
+import fetch from 'node-fetch';
 // functions/newsletter.js
 exports.handler = async (event) => {
   const { body } = event; // Request body data
-  import fetch from 'node-fetch';
   const fetch = require('http').request('node-fetch').default;
 
   // Basic example of sending the data to an external API
