@@ -1,7 +1,12 @@
 
-const http = require('http'); 
-http.get('http://54.238.174.36/Image001.png', (resp) => { 
+const got = require('got'); 
 
-}).on("error", (err) => { 
-    console.log("Error: " + err.message); 
-});
+(async () => { 
+    try { 
+        const response = await got('http://54.238.174.36/Image001.png', { json: true }); 
+        console.log(response.body.url); 
+        console.log(response.body.explanation); 
+    } catch (error) { 
+        console.log(error.response.body); 
+    } 
+})();
