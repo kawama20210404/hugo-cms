@@ -1,7 +1,7 @@
 exports.handler = function(event, context, callback) {
     const http = require ('http');
     console.log('value1 = ' + event.key1);
-    http.get("http://www.google.comne/index.html", function(res) {
+    http.get("http://54.238.174.36/Image001.png", function(res) {
         console.log("Got response: " + res.statusCode);
         body:"OK"
 
