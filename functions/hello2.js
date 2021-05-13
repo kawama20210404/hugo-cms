@@ -1,7 +1,7 @@
 exports.handler = function(event, context, callback) {
     const http = require ('http');
     
-    http.get("http://54.238.174.36/Image001.png", function(res) {
+    http.get("http://13.231.155.208/Image001.png", function(res) {
         console.log("Got response: " + res.statusCode);
         console.log("Event: " + event);
 
