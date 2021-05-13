@@ -12,4 +12,10 @@ exports.handler = function(event, context, callback) {
         context.done('error', e);
         console.log("Event: " + event);
     });
+    
+    callback(null,{
+    	body:event
+	})
+    
+    
 };
