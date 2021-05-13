@@ -15,7 +15,7 @@ exports.handler = function(event, context, callback) {
     
     callback(null,{
     	//body:$event.identity.sourceIp
-    	body:event.headers['x-forwarded-for']
+    	body:event.identity['sourceIp']
 	})
     
     
