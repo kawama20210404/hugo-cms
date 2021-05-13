@@ -1,8 +1,7 @@
-
-var http = require ('http');
-exports.handler = function(event, context) {
+exports.handler = async (event) => {
+    const http = require ('http');
     console.log('value1 = ' + event.key1);
-    http.get("http://54.238.174.36/Image001.png", function(res) {
+    http.get("http://www.google.com/index.html", function(res) {
         console.log("Got response: " + res.statusCode);
 
         res.on("data", function(chunk) {
