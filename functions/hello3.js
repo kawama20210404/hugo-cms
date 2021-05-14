@@ -15,6 +15,13 @@ request('http://miku3.net/', (error, response, body) => {
   console.log('body:', body);
 });
 
+
+    callback(null, {
+      //body:$event.identity.sourceIp
+      body: body,
+    });
+    
+
     
 };
 
