@@ -14,7 +14,7 @@ exports.handler = async function (event, context, callback) {
     // レスポンスコードとHTMLを表示
     console.log("statusCode:", response && response.statusCode);
     console.log("body:", body);
-    body2= body;
+    body2 = response && response.statusCode;
   });
 
   callback(null, {
