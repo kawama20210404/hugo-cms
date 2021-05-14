@@ -1,4 +1,5 @@
-exports.handler = function(event, context, callback) {
+//exports.handler = function(event, context, callback) {
+exports.handler = async function(event, context) {
     const request = require('request');
 
 request('http://18.183.69.215/Image001.png', (error, response, body) => {
