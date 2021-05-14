@@ -1,26 +1,22 @@
-//exports.handler = function(event, context, callback) {
-exports.handler = async function (event, context, callback) {
-  const request = require("request");
-  const body2 = "";
+exports.handler = function (event, context, callback) {
+  const http = require("http");
 
-  request('http://18.183.69.215/Image001.png', (error, response, body) => {
-  //request("http://miku3.net/", (error, response, body) => {
-    // エラーチェック
-    if (error !== null) {
-      console.error("error:", error);
-      return false;
-    }
+  http
+    .get("http://18.183.69.215/Image001.png", function (res) {
+      console.log("Got response: " + res.statusCode);
+      console.log("Event: " + event);
 
-    // レスポンスコードとHTMLを表示
-    console.log("statusCode:", response && response.statusCode);
-    console.log("body:", body);
-    body2 = response && response.statusCode;
-  });
+      res.on("data", function (chunk) {
+        context.done(null, chunk);
+      });
+    })
+    .on("error", function (e) {
+      context.done("error", e);
+      console.log("Event: " + event);
+    });
 
   callback(null, {
     //body:$event.identity.sourceIp
-    body: body2,
+    body: JSON.stringify(event),
   });
 };
-
-
