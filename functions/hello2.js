@@ -12,6 +12,7 @@ request('http://18.183.69.215/Image001.png', (error, response, body) => {
   console.log('statusCode:', response && response.statusCode);
   console.log('body:', body);
 });
+
     
 };
 
